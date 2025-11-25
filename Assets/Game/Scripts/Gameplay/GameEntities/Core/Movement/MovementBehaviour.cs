@@ -11,7 +11,9 @@ namespace EscapeGame.Gameplay
         
         public void Init(IGameEntity entity)
         {
-            
+            _moveRequest = entity.GetMoveRequest();
+            _moveSpeed = entity.GetMoveSpeed();
+            _position = entity.GetPosition();
         }
 
         public void FixedTick(IGameContext entity, float deltaTime)
