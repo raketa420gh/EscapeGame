@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EscapeGame.Gameplay
 {
-    public class MovementBehaviour : IGameEntityInit, IGameContextFixedTick
+    public sealed class MovementBehaviour : IGameEntityInit, IGameContextFixedTick
     {
         private IRequest<Vector3> _moveRequest;
         private IValue<float> _moveSpeed;

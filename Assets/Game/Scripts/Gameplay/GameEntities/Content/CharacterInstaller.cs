@@ -1,4 +1,5 @@
 ﻿using Atomic.Elements;
+using Atomic.Entities;
 using UnityEngine;
 
 namespace EscapeGame.Gameplay
@@ -9,7 +10,7 @@ namespace EscapeGame.Gameplay
         private Transform _transform;
         
         [SerializeField]
-        private Const<float> _moveSpeed;
+        private Const<float> _moveSpeed = 10;
         
         public override void Install(IGameEntity entity)
         {
@@ -17,6 +18,7 @@ namespace EscapeGame.Gameplay
             entity.AddMoveSpeed(_moveSpeed);
             entity.AddPosition(new TransformPositionVariable(_transform));
             
+            entity.AddBehaviour<MovementBehaviour>();
         }
     }
 }
