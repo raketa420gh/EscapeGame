@@ -1,0 +1,23 @@
+header: GameEntityAPI
+entityType: IGameEntity
+aggressiveInlining: true
+unsafeAccess: true
+
+namespace: EscapeGame.Gameplay
+className: GameEntityAPI
+directory: Assets/Game/Scripts/Gameplay/GameEntities/
+ 
+imports:
+- UnityEngine
+- Atomic.Entities
+- EscapeGame.Gameplay
+
+tags:
+
+values:
+#Transform 
+- Position: IVariable<Vector3>
+
+# Movement
+- MoveRequest: IRequest<Vector3>
+- MoveSpeed: IValue<float>
