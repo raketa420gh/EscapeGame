@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace EscapeGame.Gameplay
 {
-    public sealed class MovementBehaviour : IGameEntityInit, IGameContextFixedTick
+    public sealed class MovementBehaviour : IGameEntityInit, IGameEntityFixedTick
     {
         private IRequest<Vector3> _moveRequest;
-        private IValue<float> _moveSpeed;
+        private IValue<float> _moveSpeed; 
         private IVariable<Vector3> _position;
         
         public void Init(IGameEntity entity)
@@ -16,7 +16,7 @@ namespace EscapeGame.Gameplay
             _position = entity.GetPosition();
         }
 
-        public void FixedTick(IGameContext entity, float deltaTime)
+        public void FixedTick(IGameEntity entity, float deltaTime)
         {
             if (_moveRequest.Consume(out Vector3 direction))
                 _position.Value += direction * (_moveSpeed.Value * deltaTime);

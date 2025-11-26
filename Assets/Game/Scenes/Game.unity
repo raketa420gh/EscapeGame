@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EscapeGame.Gameplay.CharacterInstaller
   _transform: {fileID: 464469824}
   _moveSpeed:
-    value: 0
+    value: 3
 --- !u!114 &990007991
 MonoBehaviour:
   m_ObjectHideFlags: 0
