@@ -14,10 +14,10 @@ namespace EscapeGame.Gameplay
         private Variable<float>  _pickupRadius = 1;
 
         [SerializeField]
-        private Variable<bool>  _isPickable;
+        private Variable<bool>  _isPickable = true;
         
         [ShowInInspector,  ReadOnly]
-        private Variable<bool>  _isPicked;
+        private Variable<bool>  _isPicked = false;
 
         public override void Install(IGameEntity entity)
         {
