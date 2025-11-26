@@ -13,8 +13,18 @@ imports:
 tags:
 
 values:
+
+# Transform
 - Position: IVariable<Vector3>
 
+# Movement
 - MoveRequest: IRequest<Vector3>
 - MoveSpeed: IValue<float>
+
+# Item
+- ItemId: IValue<int>
+- ItemPickUpRequest: IRequest<IGameEntity>
+- IsPickable: IValue<bool>
+- IsPicked: IVariable<bool>
+- PickupRadius: IValue<float>
 

@@ -241,8 +241,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990007989}
-  - component: {fileID: 990007991}
-  - component: {fileID: 990007990}
+  - component: {fileID: 990007993}
+  - component: {fileID: 990007992}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -266,7 +266,7 @@ Transform:
   - {fileID: 464469824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &990007990
+--- !u!114 &990007992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -278,10 +278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417a7ea7b9324b74888d8f143ae00980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EscapeGame.Gameplay.CharacterInstaller
-  _transform: {fileID: 464469824}
+  _transform: {fileID: 990007989}
   _moveSpeed:
-    value: 3
---- !u!114 &990007991
+    value: 10
+--- !u!114 &990007993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,16 +290,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 990007986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3142498ee69840069f3a93c11b1e1f75, type: 3}
+  m_Script: {fileID: 11500000, guid: acd10824bbb826549a6d78da23e7f6b7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Atomic.Entities::Atomic.Entities.SceneEntity
+  m_EditorClassIdentifier: Assembly-CSharp::EscapeGame.Gameplay.GameEntity
   useUnityLifecycle: 1
   disposeValues: 1
   installOnAwake: 1
   uninstallOnDestroy: 1
   scriptableInstallers: []
   sceneInstallers:
-  - {fileID: 990007990}
+  - {fileID: 990007992}
   childInstallers: []
   onlySelectedGizmos: 0
   onlyEditModeGizmos: 0
